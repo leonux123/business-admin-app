@@ -1,0 +1,31 @@
+# prepare_env.yml
+
+- name: Ansible copy multiple files with wildcard matching.
+  copy:
+    src: "{{ item }}"
+    dest: /home/search/
+    owner: search
+    group: search
+    mode: 0755
+  with_fileglob:
+    - ../../deploy/*.sh
+
+- name: Run deploy_dir_check script
+  command: sh /home/search/deploy_dir_check.sh
+  register: script_log
+
+- debug: msg="{{ script_log.stdout }}"
+
+- name: Move ess_deploy
+  command: mv /home/search/ess_deploy.sh /home/search/deploy/
+
+- name: copy zip file to remote server
+  copy:
+     src: ../../target/universal/essadmin-1.0.zip
+     dest: /home/search/
+     owner: search
+     group: search
+     mode: 0755
+
+- name: Move zip file
+  command: mv /home/search/essadmin-1.0.zip /home/search/deploy/

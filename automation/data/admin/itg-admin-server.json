@@ -1,0 +1,7 @@
+[
+	{"desc": "Int GLB","server": "http://itg-int.glb.itcs.somecorp.net","port": "80","status":"200"},
+	{"desc": "Int LLB","server": "https://itg1-int.itcs.somecorp.net","port": "443","status":"200"},
+	{"desc": "Int Apache 1","server": "https://myapache.itcs.somecorp.net","port": "443","status":"200"},
+	{"desc": "Netty 1","server": "http://mynetty1.itcs.somecorp.net","port": "50060","status":"401"},
+	{"desc": "Netty 2","server": "http://mynetty2.itcs.somecorp.net","port": "50060","status":"401"}
+]

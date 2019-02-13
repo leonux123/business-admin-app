@@ -1,0 +1,11 @@
+[DEV]
+DEVSERVER01.itcs.somecorp.net
+DEVSERVER02.itcs.somecorp.net
+
+[ITG]
+ITGSERVER01.itcs.somecorp.net
+ITGSERVER01.itcs.somecorp.net
+
+[PROD]
+PRODSERVER01.itcs.somecorp.net
+PRODSERVER02.itcs.somecorp.net

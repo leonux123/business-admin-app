@@ -1,0 +1,9 @@
+# ess_deploy_playbook.yml
+
+- hosts: '{{ host }}'
+  remote_user: search
+  become: no
+
+  tasks:
+    - include: 'tasks/prepare_env.yml'
+    - include: 'tasks/deploy-{{ host }}.yml'

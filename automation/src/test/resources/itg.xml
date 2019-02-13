@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ITG-Sanity-Test">
+  <test name="query-api">
+    <packages>
+        <package name="com.somecorp.ess.query.itg"/>
+    </packages>
+     <!--
+    <classes>
+      <class name="com.hpe.ess.query.itg.AdminQuery" />
+    </classes>-->
+
+  </test>
+</suite>
