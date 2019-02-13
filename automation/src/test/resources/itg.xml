@@ -7,7 +7,7 @@
     </packages>
      <!--
     <classes>
-      <class name="com.hpe.ess.query.itg.AdminQuery" />
+      <class name="com.somecorp.ess.query.itg.AdminQuery" />
     </classes>-->
 
   </test>
