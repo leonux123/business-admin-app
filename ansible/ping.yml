@@ -1,0 +1,9 @@
+# ping.yml
+
+- hosts: all
+  remote_user: search
+  become: no
+  gather_facts: no
+
+  tasks:
+    - ping:
