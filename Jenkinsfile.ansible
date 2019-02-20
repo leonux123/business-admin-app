@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        label "linux"
+    }
+    stages {
+        stage('Ping DEV') {
+            steps {
+                sh 'pwd'
+                sh 'ansible-playbook ansible/ping --inventory=ansible/hosts --private-key=/jenkins/.ssh/jenkins_key --limit "DEV"'
+            }
+        }
+        stage('Ping ITG') {
+            steps {
+                sh 'pwd'
+                sh 'ansible-playbook ansible/ping --inventory=ansible/hosts --private-key=/jenkins/.ssh/jenkins_key --limit "ITG"'
+            }
+        }
+    }
+}
