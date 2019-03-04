@@ -1,9 +1,10 @@
 # deploy-PROD.yml
 
 - name: Deploy task started [PROD]
-  command: sh /home/search/deploy/ess_deploy.sh admin pro
+  shell: |
+    export PATH=/opt/pb/bin:/opt/perf/bin:/usr/local/sbin:/usr/sbin:/sbin:.$PATH
+    cd /home/search/deploy/
+    ./ess_deploy.sh admin pro
   register: script_log
-  environment:
-    PATH: /opt/pb/bin:/opt/perf/bin:/usr/local/sbin:/usr/sbin:/sbin:./opt/pb/bin:/opt/perf/bin:/usr/local/sbin:/usr/sbin:/sbin:./opt/mount1/nodejs/bin:/opt/mount1/apache-maven-3.3.9/bin:/usr/java/jdk1.8.0_74/bin:/sbin:/bin:/usr/sbin:/usr/bin:/opt/LinuxCOE/bin
 
 - debug: msg="{{ script_log.stdout }}"
